@@ -1,8 +1,8 @@
 let mysql = require('mysql')
 const db_config = {
-  host: 'localhost',
+  host:'localhost',
   user: 'root',
-  password: '12354860',
+  password: 'root',
   port: '3306',
   database: 'node_app'
 }
@@ -15,7 +15,7 @@ function conMysql(sql) {
     if (err) {
       console.log(`mysql连接失败: ${err}!`)
     } else {
-      console.log('mysql连接成功!')
+      // console.log('mysql连接成功!')
     }
   })
   return new Promise((resolve, reject) => {
@@ -36,7 +36,7 @@ function closeMysql(connect) {
     if (err) {
       console.log(`mysql关闭失败:${err}!`)
     } else {
-      console.log('mysql关闭成功!')
+      // console.log('mysql关闭成功!')
     }
   })
 }
